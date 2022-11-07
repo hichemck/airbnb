@@ -7,7 +7,8 @@ In this project I built and deployed a model for predicting airbnb room prices b
 - EDA
 - Trained several models: linear, decision tree, random forest and XGboost
 - Served the best model (XGBoost) with BentoML and tested it with swagger UI
-- Deployed the model with Docker
+- Deployed the model locally with bentoml / docker
+- deployed the model to AWS with ECR / ECS
 
 ## Usage
 - Clone the repository, cd to the airbnb repo folder
@@ -32,3 +33,11 @@ room_type: Hotel room, Entire home/apt	, Private room	, Shared room
     * bentoml containerize airbnb_price_predictor:latest
     * fetch the actual tag from terminal output and run : docker run -it --rm -p 3000:3000 airbnb_price_predictor:2c7ncjc52suw3igt serve --production
     * Open the link http://0.0.0.0:3000. If you are using windows open http://localhost:3000 to test the model with swagger UI and test data in the same way you did it previously
+
+## Cloud Deployment 
+
+Here you can see how I am using the prediction service in the cloud. For this I pushed the docker image to AWS ECR and ran the prediction taks in ECS
+
+![plot](./pics/API.PNG)
+
+![plot](./pics/ECS.PNG)
