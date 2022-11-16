@@ -38,6 +38,6 @@ room_type: Hotel room, Entire home/apt	, Private room	, Shared room
 
 Here you can see how I am using the prediction service in the cloud. For this I pushed the docker image to AWS ECR and ran the prediction taks in ECS
 
-![plot](./pics/API.PNG)
+![plot](./pics/API.jpg)
 
 ![plot](./pics/ECS.PNG)
